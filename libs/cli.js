@@ -128,6 +128,8 @@ module.exports = function() {
             });
         } else if (key.name == 'g') {
             exec('open ' + item);
+        } else if (key.name == 'q' || key.name == 'escape') {
+            process.exit();            
         }
     });
     menu.on('empty', function() {
